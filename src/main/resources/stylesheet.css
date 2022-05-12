@@ -1,0 +1,11 @@
+#frameRoot{
+   -fx-background-color:#919191;
+
+}
+#volumeslide{
+  -fx-background-color:"green";
+}
+.button{
+-fx-height:50;
+-fx-width:50;
+}

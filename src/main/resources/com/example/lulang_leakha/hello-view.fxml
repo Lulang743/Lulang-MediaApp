@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="frameRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lulang_leakha.HelloController">
+   <children>
+      <HBox layoutX="-5.0" layoutY="650.0" prefHeight="72.0" prefWidth="1375.0" spacing="20.0" style="-fx-background-color: #6b6b6b;">
+         <children>
+            <Label fx:id="labelv" text="VOL" textFill="WHITE">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="volumeslider" majorTickUnit="10.0" minorTickCount="4" prefHeight="24.0" prefWidth="77.0" style="-fx-background-color: #6b6b6b;" value="20.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Slider>
+            <Label fx:id="volumelabel" text="0" textFill="WHITE">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imagestop" fitHeight="42.0" fitWidth="43.0" onMouseClicked="#StopMedia" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../stop.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="400.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="imagplay" fitHeight="36.0" fitWidth="37.0" onMouseClicked="#PlayMedia" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../play.png" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="imagepause" fitHeight="35.0" fitWidth="43.0" onMouseClicked="#PauseMedia" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../pause.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="videoduaration" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="playedduration" alignment="BOTTOM_CENTER" textFill="WHITE" />
+            <Label fx:id="labeltime" prefHeight="35.0" prefWidth="206.0" textFill="#89c63f">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" top="20.0" />
+         </padding>
+      </HBox>
+      <MediaView fx:id="mediaview" fitHeight="550.0" fitWidth="1180.0" layoutX="169.0" layoutY="98.0" />
+      <HBox alignment="TOP_RIGHT" layoutX="-7.0" layoutY="-8.0" prefHeight="58.0" prefWidth="1375.0" style="-fx-background-color: #6b6b6b;">
+         <children>
+            <Label prefHeight="36.0" prefWidth="193.0" textFill="#14ee11">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="30.0" right="1100.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btnclose" fitHeight="35.0" fitWidth="27.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../cross.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" right="10.0" top="30.0" />
+               </HBox.margin>
+            </ImageView>
+         </children></HBox>
+      <ProgressBar fx:id="playslider" layoutX="-5.0" layoutY="648.0" minHeight="-Infinity" prefHeight="10.0" prefWidth="1375.0" progress="0.0" />
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</AnchorPane>
